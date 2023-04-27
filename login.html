@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <title>LOG IN</title>
+    <script src="lgscript.js"></script>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #60a3bc;
+      }
+
+      .user_card {
+        height: 400px;
+        width: 350px;
+        margin-top: 150px;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        background: #f39c12;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+      }
+
+      .innput {
+        background: #e9e1e0;
+        color: rgb(13, 0, 43);
+        margin-left: 80px;
+        height: 30px;
+        width: 200px;
+        padding: auto;
+        align-items: center;
+        border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+      }
+      .formcont {
+        color: rgb(17, 5, 46);
+        font-weight: bold;
+        text-align: center;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .entered {
+        appearance: button;
+        backface-visibility: hidden;
+        background-color: #405cf5;
+        border-radius: 6px;
+        border-width: 0;
+        box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+          rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        font-family: -apple-system, system-ui, "Segoe UI", Roboto,
+          "Helvetica Neue", Ubuntu, sans-serif;
+        font-size: 100%;
+        height: 50px;
+        line-height: 1.15;
+        margin: 30px 90px 20px;
+        outline: none;
+        overflow: hidden;
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        text-transform: none;
+        transform: translateZ(0);
+        transition: all 0.2s, box-shadow 0.08s ease-in;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 50%;
+      }
+      .entered:focus {
+        box-shadow: none;
+        outline: 0px;
+      }
+      .signup {
+        margin: 80px 138px 0px;
+        text-decoration: none;
+      }
+      .signup:link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+      }
+
+      /* visited link */
+      .signup:visited {
+        color: #c0392b;
+      }
+
+      /* mouse over link */
+      .signup:hover {
+        color: #405cf5;
+      }
+
+      /* selected link */
+      .signup:active {
+        color: rgb(17, 5, 46);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="user_card">
+      <form
+        name="LgForm"
+        action="lgp.php"
+        onsubmit="return validateLgForm()"
+        method="post"
+      >
+        <h4 class="formcont">Email</h4>
+        <input class="innput" type="email" id="email" name="email" /><br />
+        <h4 class="formcont">Password</h4>
+        <input
+          class="innput"
+          type="password"
+          id="password"
+          name="password"
+        /><br />
+        <input class="entered" type="submit" value="LOG IN" />
+        <a class="signup" href="registration.html">SIGN UP!</a>
+      </form>
+    </div>
+  </body>
+</html>
